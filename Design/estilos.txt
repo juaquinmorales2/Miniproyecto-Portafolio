@@ -1,0 +1,18 @@
+colors:
+
+background section 1:
+#0a0f22
+to
+#2b4c90
+
+yellow:
+#ebf891
+
+background section 2:
+#0a0f22
+
+divs:
+#1d2236
+
+inputs:
+#e3e3e3
