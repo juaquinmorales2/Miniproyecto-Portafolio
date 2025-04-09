@@ -5,34 +5,150 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-[#0a0f22] text-white relative font-[poppins]">
-    <script src="script.js"></script>
+<body class="bg-[#0a0f22] text-white relative font-['Roboto'] w-[100%]">
+    <style>
+        @keyframes float-soft-rotate1 {
+            0% {
+                transform: translateY(0) rotate(20deg);
+            }
+
+            50% {
+                transform: translateY(-16px) rotate(20deg);
+            }
+
+            100% {
+                transform: translateY(0) rotate(20deg);
+            }
+        }
+
+        @keyframes float-soft-rotate2 {
+            0% {
+                transform: translateY(0) rotate(10deg);
+            }
+
+            50% {
+                transform: translateY(-16px) rotate(10deg);
+            }
+
+            100% {
+                transform: translateY(0) rotate(10deg);
+            }
+        }
+
+        @keyframes float-soft {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: scale(1.03);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .float1 {
+            animation: float-soft-rotate1 4s ease-in-out infinite;
+        }
+
+        .float2 {
+            animation: float-soft-rotate2 4s ease-in-out infinite;
+        }
+
+        .float-soft {
+            animation: float-soft 4s ease-in-out infinite;
+            display: inline-block;
+        }
+
+        @keyframes float-soft-rotate3 {
+            0% {
+                transform: translateY(0) rotate(20deg);
+            }
+
+            50% {
+                transform: translateY(-16px) rotate(20deg);
+            }
+
+            100% {
+                transform: translateY(0) rotate(20deg);
+            }
+        }
+
+        @keyframes float-soft-rotate4 {
+            0% {
+                transform: translateY(0) rotate(10deg);
+            }
+
+            50% {
+                transform: translateY(-16px) rotate(10deg);
+            }
+
+            100% {
+                transform: translateY(0) rotate(10deg);
+            }
+        }
+
+        @keyframes float-soft-rotate5 {
+            0% {
+                transform: translateY(0) rotate(-20deg);
+            }
+
+            50% {
+                transform: translateY(-16px) rotate(-20deg);
+            }
+
+            100% {
+                transform: translateY(0) rotate(-20deg);
+            }
+        }
+
+        .float3 {
+            animation: float-soft-rotate3 4s ease-in-out infinite;
+        }
+
+        .float4 {
+            animation: float-soft-rotate4 4s ease-in-out infinite;
+        }
+
+        .float5 {
+            animation: float-soft-rotate5 4s ease-in-out infinite;
+        }
+    </style>
+
     <header class="flex">
-        <img class="mt-4 ml-[10%] w-[70px]" src="/Resources/nike.png" alt="">
+        <img class="mt-4 ml-[10%] h-[8%] w-[8%] z-10" src="/Resources/logo.png" alt="">
         <nav class="mt-12 flex absolute left-[50%] translate-x-[-50%] gap-18 items-center text-white text-sm">
-            <a href="">ABOUT ME</a>
-            <a href="">SKILLS</a>
-            <a href="">PROJECTS</a>
+            <a onclick="document.getElementById('me').scrollIntoView({ behavior: 'smooth' });"
+                class="cursor-pointer">ABOUT ME</a>
+            <a onclick="document.getElementById('skills').scrollIntoView({ behavior: 'smooth' });"
+                class="cursor-pointer">SKILLS</a>
+            <a onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });"
+                class="cursor-pointer">PROJECTS</a>
         </nav>
-        <button href="https://www.youtube.com"
-            class="absolute top-10 right-[10%] flex justify-center items-center rounded-3xl border-white border-1 text-[13px] pl-2">CONTACT<img
+        <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });"
+            class="absolute top-10 right-[10%] flex justify-center items-center rounded-3xl border-white border-1 text-[13px] pl-2 cursor-pointer">CONTACT<img
                 class="ml-2 w-8 bg-[#ebf891] rounded-full" src="/Resources/up.png" alt=""></button>
 
     </header>
 
     <!--Section1-->
+
     <section
         class="bg-gradient-to-b from-[#0a0f22] to-[#366fa5] w-[100%] h-[85vh] flex flex-col justify-center items-center relative">
         `
         <h1 class="text-5xl absolute top-15">I'm <span class="text-[#ebf891] italic">Juaquin Morales</span></h1><br>
-        <h1 class="text-[3.3rem] absolute top-30"><span class=" border-[#ffffff42] border-1 rounded-lg pr-3 pl-3">Full
+        <h1 class="text-[3.3rem] absolute top-30"><span
+                class=" border-[#ffffff42] border-1 rounded-lg pr-3 pl-3 float-soft">Full
                 Stack</span> Developer</h1>
         <div
-            class="relative ml-[-75%] mb-[-150px] bg-[#1d2236bb] w-[20%] h-35 p-2 rounded-lg shadow-2xl shadow-[#ffffff3d] rotate-[-10deg]">
+            class="relative ml-[-75%] mb-[-150px] bg-[#1d2236bb] w-[20%] h-35 p-2 rounded-lg shadow-2xl shadow-[#ffffff3d] rotate-[-30deg] float1">
             <h4 class=" m-3">Client Review from<br> Maldonado</h4>
             <img class="w-20 absolute top-[21%] left-[40%] ml-1" src="/Resources/stars.png" alt="">
             <p class="flex flex-wrap flex-col justify-center items-center text-[11px] text-gray-400 ml-3">This boy it's
@@ -40,7 +156,7 @@
             </p>
         </div>
         <div
-            class="relative mr-[-75%] mb-[-140px] bg-[#1d2236bb] w-[20%] h-35 p-2 rounded-lg rotate-[10deg] shadow-2xl shadow-[#ffffff3d]">
+            class="relative mr-[-75%] mb-[-140px] bg-[#1d2236bb] w-[20%] h-35 p-2 rounded-lg rotate-[10deg] shadow-2xl shadow-[#ffffff3d] float2">
             <h4 class=" m-3">MY EXPERTISE</h4>
             <p class="flex-nowrap flex-col justify-center items-start text-sm text-gray-400 ml-3">
                 BACKEND -------------🟣--- <b class="absolute right-3">88%</b><br>
@@ -48,20 +164,24 @@
                 FRONTEND ----------------🟡- <b class="absolute right-3">93%</b>
             </p>
         </div>
-        <img class="w-100 absolute bottom-[2px] z-0" src="/Resources/man.PNG" alt=""
+        <img class="w-[25%] absolute bottom-[2px] z-0" src="/Resources/man.PNG" alt=""
             style=" filter: drop-shadow(-120px -20px 120px #eaf891) drop-shadow(120px -20px 140px #ebf891)">
         <button
-            class="bg-[#ebf891] text-black rounded-2xl z-1 absolute bottom-10 pr-4 pl-4 pt-[2px] pb-[2px] border-black border-3 text-[13px]">MY
+            class="bg-[#ebf891] text-black rounded-2xl z-1 absolute bottom-10 pr-4 pl-4 pt-[2px] pb-[2px] border-black border-3 text-[13px] cursor-pointer">MY
             PROJECTS</button>
     </section>
+
     <hr class="z-20 h-[2px] bg-[#ffffffb0] border-0 w-[100%]">
 
     <!--end section 1-->
 
-    <section class="h-[90vh] bg-[#1d2236bb] z-10 relative">
-        <img class="w-[80px] absolute top-[10%] left-[25%] rotate-[-20deg] rounded-xl shadow-2xl shadow-[#ffffffab]" src="/Resources/yo.jpg" alt="">
-        <img class="w-[120px] absolute bottom-[20%] left-[15%] rotate-[10deg] rounded-xl shadow-2xl shadow-[#ffffffab]" src="/Resources/yob.jpg" alt="">
-        <img class="w-[100px] absolute top-[40%] right-[15%] rotate-[-20deg] rounded-xl shadow-2xl shadow-[#ffffffab]" src="/Resources/yoc.jpg" alt="">
+    <section id="me" class="h-[90vh] bg-[#1d2236bb] z-10 relative">
+        <img class="w-[80px] absolute top-[10%] left-[25%] rotate-[-40deg] rounded-xl shadow-2xl shadow-[#ffffffab] float3"
+            src="/Resources/yo.jpg" alt="">
+        <img class="w-[120px] absolute bottom-[20%] left-[15%] rotate-[10deg] rounded-xl shadow-2xl shadow-[#ffffffab] float4"
+            src="/Resources/yob.jpg" alt="">
+        <img class="w-[100px] absolute top-[40%] right-[15%] rotate-[-5deg] rounded-xl shadow-2xl shadow-[#ffffffab] float5"
+            src="/Resources/yoc.jpg" alt="">
         <div>
             <h1 class="absolute top-[25%] text-center text-6xl left-[50%] translate-x-[-50%] text-[#ebf891]">WHO AM I?
             </h1>
@@ -77,73 +197,153 @@
                 <br>eibet8bne8tb8rebgye8gboeirbge8gb
             </p>
             <button
-                class="bg-[#ebf891] text-black rounded-2xl z-1 absolute left-[50%] translate-x-[-50%] bottom-[15%] pr-6 pl-6 pt-[8px] pb-[8px] border-black border-3 text-[13px]">SHOW
+                class="bg-[#ebf891] cursor-pointer text-black rounded-2xl z-1 absolute left-[50%] translate-x-[-50%] bottom-[15%] pr-6 pl-6 pt-[8px] pb-[8px] border-black border-3 text-[13px]">SHOW
                 MY PROJECTS</button>
         </div>
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
     </section>
 
     <!--End Section 2-->
 
-    
-<section class="h-[120vh] bg-[#1d2236bb] flex flex-col justify-center items-center relative">
-    <h1 class="absolute top-[10%] text-center text-6xl left-[50%] translate-x-[-50%] text-[#ebf891]">MY SKILLS</h1>
-<div class="absolute w-[50%] h-[400px] rounded-lg top-[43%] left-[40%] translate-x-[-50%] translate-y-[-50%] flex flex-wrap flex-col justify-center items-center">
-    <div class="w-[24%] border-1 border-white h-[190px] mb-1 bg-slate-700 rounded-xl"><img class="w-28 p-3 justify-center text-center translate-x-[32%] translate-y-[35%]" src="/Resources/html.png" alt=""></div>
-    <div class="w-[24%] border-1 border-white h-[190px] mb-1 bg-slate-700 rounded-xl"><img class="w-28 p-3 justify-center text-center translate-x-[32%] translate-y-[70%]" src="/Resources/next.png" alt=""></div>
-    <div class="w-[24%] border-1 border-white h-[190px] mb-1 bg-slate-700 rounded-xl"><img class="w-28 p-3 justify-center text-center translate-x-[32%] translate-y-[35%]" src="/Resources/css.png" alt=""></div>
-    <div class="w-[24%] border-1 border-white h-[190px] mb-1 bg-slate-700 rounded-xl"><img class="w-28 p-3 justify-center text-center translate-x-[32%] translate-y-[35%]" src="/Resources/node.png" alt=""></div>
-    <div class="w-[24%] border-1 border-white h-[190px] mb-1 bg-slate-700 rounded-xl"><img class="w-28 p-3 justify-center text-center translate-x-[32%] translate-y-[35%]" src="/Resources/JavaScript.png" alt=""></div>
-    <div class="w-[24%] border-1 border-white h-[190px] mb-1 bg-slate-700 rounded-xl"><img class="w-28 p-3 justify-center text-center translate-x-[32%] translate-y-[35%]" src="/Resources/express.png.png" alt=""></div>
-    <div class="w-[24%] border-1 border-white h-[190px] mb-1 bg-slate-700 rounded-xl"><img class="w-28 p-3 justify-center text-center translate-x-[32%] translate-y-[35%]" src="/Resources/react.png" alt=""></div>
-    <div class="w-[24%] border-1 border-white h-[190px] mb-1 bg-slate-700 rounded-xl"><img class="w-28 p-3 justify-center text-center translate-x-[32%] translate-y-[35%]" src="/Resources/python.png" alt=""></div>
-</div>
-<div class="bg-[#3e4b8642] w-[20%] h-[380px] rounded-lg absolute top-[50%] right-[15%] translate-y-[-67%] flex flex-col justify-center items-center">
-<h2 class="text-[70px] mt-[-60px] mb-[-10px]">4</h2>
-<p class="text-[19px] text-center font-bold">Years<br>Experience<br>Working</p>
-<button class="bg-[#ebf891] text-black rounded-2xl mb-[-20px] z-1 absolute left-[50%] translate-x-[-50%] bottom-[15%] pr-6 pl-6 pt-[8px] pb-[8px] border-black border-3 text-[10px]">DOWNLOAD MY CV</button>
-</div>
-<div class="absolute border-1 border-white w-[70%] h-[200px] mt-30  bg-slate-700 rounded-xl left-[50%] translate-x-[-50%] translate-y-[140%] flex flex-wrap flex-col justify-center items-center"><h3 class="absolute text-center text-3xl top-[15%] left-[50%] translate-x-[-50%] text-[#ebf891]">ADITIONAL SKILLS</h3>
-<div class="flex flex-wrap justify-center items-center mt-15 w-[90%] h-[110px]">
-<img class="w-[12%] p-3" src="/Resources/aws.png" alt="">
-<img class="w-[12%] p-3" src="/Resources/django.png" alt="">
-<img class="w-[12%] p-3" src="/Resources/Docker.png.png" alt="">
-<img class="w-[12%] p-3" src="/Resources/postgresql.png" alt="">
-<img class="w-[12%] p-3" src="/Resources/tailwind.png" alt="">
-<img class="w-[12%] p-3" src="/Resources/Typescript.png.png" alt="">
-<img class="w-[12%] p-3" src="/Resources/angular.png" alt="">
-<img class="w-[12%] p-3" src="/Resources/mongodb.png" alt="">
-</div>
-</div>
-</section>
 
+    <section id="skills" class="h-[120vh] bg-[#1d2236bb] flex flex-col justify-center items-center relative">
+        <h1 class="absolute top-[10%] text-center text-6xl left-[50%] translate-x-[-50%] text-[#ebf891]">MY SKILLS</h1>
+        <div
+            class="absolute w-[50%] h-[400px] rounded-lg top-[43%] left-[40%] translate-x-[-50%] translate-y-[-50%] flex flex-wrap flex-col justify-center items-center">
+            <div class="w-[24%] border-1 border-[#ffffff43] h-[190px] mb-1 bg-slate-700 rounded-xl justify-center flex flex-col items-center"><img
+                    class=" hover:scale-150 transition-transform duration-300  w-28 p-3 justify-center text-center "
+                    onmouseenter="showTooltip(event)" onmousemove="moveTooltip(event)" onmouseleave="hideTooltip()"
+                    src="/Resources/html.png" alt="HTML"></div>
+            <div class="w-[24%] border-1 border-[#ffffff43] h-[190px] mb-1 bg-slate-700 rounded-xl justify-center flex flex-col items-center"><img
+                    class=" hover:scale-150 transition-transform duration-300  w-28 p-3 justify-center text-center"
+                    onmouseenter="showTooltip(event)" onmousemove="moveTooltip(event)" onmouseleave="hideTooltip()"
+                    src="/Resources/next.png" alt="Next.Js"></div>
+            <div class="w-[24%] border-1 border-[#ffffff43] h-[190px] mb-1 bg-slate-700 rounded-xl  justify-center flex flex-col items-center"><img
+                    class=" hover:scale-150 transition-transform duration-300  w-28 p-3 justify-center text-center"
+                    onmouseenter="showTooltip(event)" onmousemove="moveTooltip(event)" onmouseleave="hideTooltip()"
+                    src="/Resources/css.png" alt="CSS"></div>
+            <div class="w-[24%] border-1 border-[#ffffff43] h-[190px] mb-1 bg-slate-700 rounded-xl  justify-center flex flex-col items-center"><img
+                    class=" hover:scale-150 transition-transform duration-300  w-28 p-3 justify-center text-center"
+                    onmouseenter="showTooltip(event)" onmousemove="moveTooltip(event)" onmouseleave="hideTooltip()"
+                    src="/Resources/node.png" alt="Node.Js"></div>
+            <div class="w-[24%] border-1 border-[#ffffff43] h-[190px] mb-1 bg-slate-700 rounded-xl  justify-center flex flex-col items-center"><img
+                    class=" hover:scale-150 transition-transform duration-300  w-28 p-3 justify-center text-center"
+                    onmouseenter="showTooltip(event)" onmousemove="moveTooltip(event)" onmouseleave="hideTooltip()"
+                    src="/Resources/JavaScript.png" alt="JavaScript"></div>
+            <div class="w-[24%] border-1 border-[#ffffff43] h-[190px] mb-1 bg-slate-700 rounded-xl  justify-center flex flex-col items-center"><img
+                    class=" hover:scale-150 transition-transform duration-300  w-28 p-3 justify-center text-center"
+                    onmouseenter="showTooltip(event)" onmousemove="moveTooltip(event)" onmouseleave="hideTooltip()"
+                    src="/Resources/express.png.png" alt="Express"></div>
+            <div class="w-[24%] border-1 border-[#ffffff43] h-[190px] mb-1 bg-slate-700 rounded-xl  justify-center flex flex-col items-center"><img
+                    class=" hover:scale-150 transition-transform duration-300 w-28 p-3 justify-center text-center"
+                    onmouseenter="showTooltip(event)" onmousemove="moveTooltip(event)" onmouseleave="hideTooltip()"
+                    src="/Resources/react.png" alt="React Native"></div>
+            <div class="w-[24%] border-1 border-[#ffffff43] h-[190px] mb-1 bg-slate-700 rounded-xl  justify-center flex flex-col items-center"><img
+                    class=" hover:scale-150 transition-transform duration-300  w-28 p-3 justify-center text-center"
+                    onmouseenter="showTooltip(event)" onmousemove="moveTooltip(event)" onmouseleave="hideTooltip()"
+                    src="/Resources/python.png" alt="Python"></div>
+        </div>
+        <div
+            class="bg-[#3e4b8642] w-[19.8%] h-[380px] rounded-lg absolute top-[50%] right-[15%] translate-y-[-67%] flex flex-col justify-center items-center">
+            <h2 class="text-[70px] mt-[-60px] mb-[-10px]">4</h2>
+            <p class="text-[19px] text-center font-bold">Years<br>Experience<br>Working</p>
+            <button
+                class="bg-[#ebf891] cursor-pointer text-black rounded-2xl mb-[-20px] z-1 absolute left-[50%] translate-x-[-50%] bottom-[15%] pr-6 pl-6 pt-[8px] pb-[8px] border-black border-3 text-[10px]">DOWNLOAD
+                MY CV</button>
+        </div>
+        <div
+            class="mb-10 absolute border-1 border-[#ffffff43] w-[70%] h-[25%]  bg-slate-700 rounded-xl left-[50%] translate-x-[-50%] translate-y-[140%] flex flex-wrap flex-col justify-center items-center">
+            <h3 class="text-center text-3xl justify-center flex flex-col items-top align-text-top text-[#ebf891]">ADDITIONAL
+                SKILLS</h3>
+            <div class="flex flex-wrap justify-center items-center justify-center flex-col items-center w-[90%] h-[70%]">
+                <img class="w-[12%] p-3 hover:scale-150 transition-transform duration-300"
+                    onmouseenter="showTooltip(event)" onmousemove="moveTooltip(event)" onmouseleave="hideTooltip()"
+                    src="/Resources/aws.png" alt="aws">
+                <img class="w-[12%] p-3 hover:scale-150 transition-transform duration-300"
+                    onmouseenter="showTooltip(event)" onmousemove="moveTooltip(event)" onmouseleave="hideTooltip()"
+                    src="/Resources/django.png" alt="Django">
+                <img class="w-[12%] p-3 hover:scale-150 transition-transform duration-300"
+                    onmouseenter="showTooltip(event)" onmousemove="moveTooltip(event)" onmouseleave="hideTooltip()"
+                    src="/Resources/Docker.png.png" alt="Docker">
+                <img class="w-[12%] p-3 hover:scale-150 transition-transform duration-300"
+                    onmouseenter="showTooltip(event)" onmousemove="moveTooltip(event)" onmouseleave="hideTooltip()"
+                    src="/Resources/postgresql.png" alt="SQL">
+                <img class="w-[12%] p-3 hover:scale-150 transition-transform duration-300"
+                    onmouseenter="showTooltip(event)" onmousemove="moveTooltip(event)" onmouseleave="hideTooltip()"
+                    src="/Resources/tailwind.png" alt="Tailwind">
+                <img class="w-[12%] p-3 hover:scale-150 transition-transform duration-300"
+                    onmouseenter="showTooltip(event)" onmousemove="moveTooltip(event)" onmouseleave="hideTooltip()"
+                    src="/Resources/Typescript.png.png" alt="TypeScript">
+                <img class="w-[12%] p-3 hover:scale-150 transition-transform duration-300"
+                    onmouseenter="showTooltip(event)" onmousemove="moveTooltip(event)" onmouseleave="hideTooltip()"
+                    src="/Resources/angular.png" alt="Angular">
+                <img class="w-[12%] p-3 hover:scale-150 transition-transform duration-300"
+                    onmouseenter="showTooltip(event)" onmousemove="moveTooltip(event)" onmouseleave="hideTooltip()"
+                    src="/Resources/mongodb.png" alt="MongoDB">
+            </div>
+        </div>
+    </section>
 
-<!--End Section 3-->
+    <!--End Section 3-->
 
+    <section id="projects" class="h-[100vh] bg-[#1d2236bb] flex flex-col justify-center items-center relative">
+        <div class="absolute top-[30%] left-[5%] w-[60%] h-[40%]">
+            <h2 class="text-start ml-[20%] text-7xl text-[#FFFF]">THE WORKS <br> CLOSEST TO <br> MY HEARTH</h2>
+        </div>
+        <div
+            class="w-[40%] h-[75%] rounded flex gap-1 p-1.5 mt-8 absolute top-[45%] right-[0%] translate-y-[-50%] translate-x-[-20%]">
+            <p class="group h-full flex-1 overflow-hidden cursor-pointer rounded-sm transition-all duration-500 border border-[#ffffff32] flex justify-center items-end hover:flex-[4] hover:scale-120 bg-cover bg-center"
+                style="background-image: url('/Resources/car.jpg')">
+                <span
+                    class="min-w-[14em] px-2 py-9 text-center rotate-[-90deg] transition-all duration-500 uppercase text-[#ffffff] tracking-wide mb-[60px] group-hover:rotate-0">
+                    CAR WASH PAGE
+                </span>
+            </p>
+            <p class="group h-full flex-1 overflow-hidden cursor-pointer rounded-sm transition-all duration-500 border border-[#ffffff32] flex justify-center items-end hover:flex-[4] hover:scale-120 bg-cover bg-center"
+                style="background-image: url('/Resources/music.jpg')">
+                <span
+                    class="min-w-[14em] px-2 py-9 text-center rotate-[-90deg] transition-all duration-500 uppercase text-[#ffffff] tracking-wide mb-[60px] group-hover:rotate-0">
+                    MUSICIAN'S PAGE
+                </span>
+            </p>
+            <p class="group h-full flex-1 overflow-hidden cursor-pointer rounded-sm transition-all duration-500 border border-[#ffffff32] flex justify-center items-end hover:flex-[4] hover:scale-120 bg-cover bg-center"
+                style="background-image: url('/Resources/uber.jpg')">
+                <span
+                    class="min-w-[14em] px-2 py-9 text-center rotate-[-90deg] transition-all duration-500 uppercase text-[#ffffff] tracking-wide mb-[60px] group-hover:rotate-0">
+                    TRANSPORTATION SERVICES PAGE
+                </span>
+            </p>
+        </div>
 
-<section class="h-[80vh] bg-[#1d2236bb] flex flex-col justify-center items-center relative">
-    <div class="absolute top-[30%] left-[15%] w-[40%] h-[40%]"><h2 class="text-start ml-[20%] text-6xl text-[#FFFF]">THE WORKS <br> CLOSEST TO <br> MY HEARTH</h2></div>
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-    <button class="bg-[#ebf891] text-black rounded-full font-semibold mb-[-70px] z-1 absolute left-[50%] translate-x-[-50%] bottom-[20%] pr-24 pl-24 pt-[22px] pb-[22px] border-black border-3 text-[16px]">SHOW MY PROJETS</button>
-</section>
+        <button
+            class="bg-[#ebf891] cursor-pointer text-black rounded-full font-semibold mb-[-70px] z-1 absolute left-[40%] translate-x-[-50%] bottom-[25%] pr-[10%] pl-[10%] pt-[22px] pb-[22px] border-black border-3 text-[16px]">SHOW
+            MY PROJETS</button>
+    </section>
 
-<!--End Section 4-->
+    <!--End Section 4 -->
 
-
-<!--Section 5
-<section><div>
-<h1>LET'S HAVE A CHAT</h1>
-<input type="text" placeholder="YOUR NAME">
-<input type="email" placeholder="EMAIL ADRESS">
-<textarea placeholder="CHAT HERE"></textarea>
-<button>SUBMIT HERE</button>
-</div>
-</section>
--->
+    <section id="contact" class="h-[90vh] bg-[#1d2236bb] flex flex-col justify-center items-center relative w-full">
+        <div
+            class="bg-white p-8 rounded-3xl shadow-sm w-[70%] h-auto border border-t-5 border-l-5 border-gray-500 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+            <h1 class="text-5xl font-medium text-gray-800 mb-18 text-center">LET'S HAVE A CHAT</h1>
+            <form class="space-y-6 text-start">
+                <div>
+                    <input type="text" placeholder="YOUR NAME"
+                        class="w-full px-6 py-4 border-b rounded-lg focus:outline-none text-black bg-slate-300 placeholder-gray-600">
+                </div>
+                <div>
+                    <input type="email" placeholder="EMAIL ADDRESS"
+                        class="w-full px-6 py-4 border-b rounded-lg focus:outline-none text-black bg-slate-300 placeholder-gray-600">
+                </div>
+                    <textarea
+                      placeholder="CHAT HERE"
+                      rows="6"
+                      class="w-full h-35 px-6 pt-4 border-b rounded-lg focus:outline-none text-black bg-slate-300 resize-none placeholder-gray-600"></textarea>
+                      <button type="submit"
+                    class="w-full bg-[#ebf891] text-black py-3 px-4 rounded-full text-[14px] font-semibold mt-5 cursor-pointer">
+                    SUBMIT HERE
+                </button>
+            </form>
+        </div>
+    </section>
 </body>
-
 </html>
