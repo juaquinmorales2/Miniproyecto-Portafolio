@@ -7,11 +7,11 @@ function showTooltip(event) {
 
   Object.assign(tooltip.style, {
     position: "absolute",
-    background: "black",
+    background: "#1d2236",
     color: "white",
     padding: "4px 8px",
     borderRadius: "4px",
-    fontSize: "12px",
+    fontSize: "16px",
     pointerEvents: "none",
     zIndex: "9999",
     top: event.pageY + 10 + "px",

@@ -18,3 +18,19 @@ inputs:
 #e3e3e3
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+<header class="flex items-center justify-around text-center bg-[#0a0f22] w-[100%] h-[10%] fixed top-0 z-50">
+        <img class="mt-4 ml-[10%] h-[8%] w-[8%] z-10" src="/Resources/logo.png" alt="">
+        <nav class="mt-12 flex gap-18 items-center text-white text-sm">
+            <a onclick="document.getElementById('me').scrollIntoView({ behavior: 'smooth' });"
+                class="cursor-pointer">ABOUT ME</a>
+            <a onclick="document.getElementById('skills').scrollIntoView({ behavior: 'smooth' });"
+                class="cursor-pointer">SKILLS</a>
+            <a onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });"
+                class="cursor-pointer">PROJECTS</a>
+        </nav>
+        <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });"
+            class="flex justify-end items-center rounded-3xl border-white border-1 text-[13px] pl-2 cursor-pointer">CONTACT<img
+                class="ml-2 w-8 bg-[#ebf891] rounded-full" src="/Resources/up.png" alt=""></button>
+
+    </header>
